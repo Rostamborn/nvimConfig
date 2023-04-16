@@ -15,7 +15,11 @@ return require('packer').startup(function(use)
   use "EdenEast/nightfox.nvim"
   use { 'nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'}}
   use { 'mbbill/undotree' }
+  use { 'github/copilot.vim' }
   use { 'ThePrimeagen/harpoon' }
+  use {"akinsho/toggleterm.nvim", tag = '*', config = function()
+      require("toggleterm").setup()
+  end}
   use {
 	  'VonHeikemen/lsp-zero.nvim',
 	  branch = 'v2.x',
