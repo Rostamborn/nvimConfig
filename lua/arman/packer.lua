@@ -12,6 +12,10 @@ return require('packer').startup(function(use)
 	  -- or                            , branch = '0.1.x',
 	  requires = { {'nvim-lua/plenary.nvim'} }
   }
+  use {
+      "windwp/nvim-autopairs",
+      config = function() require("nvim-autopairs").setup {} end
+  }
   use "EdenEast/nightfox.nvim"
   use { 'nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'}}
   use { 'mbbill/undotree' }
@@ -20,6 +24,12 @@ return require('packer').startup(function(use)
   use {"akinsho/toggleterm.nvim", tag = '*', config = function()
       require("toggleterm").setup()
   end}
+  use {
+      'numToStr/Comment.nvim',
+      config = function()
+          require('Comment').setup()
+      end
+  }
   use {
 	  'VonHeikemen/lsp-zero.nvim',
 	  branch = 'v2.x',
