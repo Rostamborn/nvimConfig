@@ -6,6 +6,7 @@ vim.cmd("colorscheme nightfox")
 
 return require('packer').startup(function(use)
   -- Packer can manage itself
+  use { 'github/copilot.vim' }
   use 'wbthomason/packer.nvim'
   use {
 	  'nvim-telescope/telescope.nvim', tag = '0.1.1',
